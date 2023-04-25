@@ -138,6 +138,10 @@ section div p {
   gap: 30px;
 }
 
+.hero-text {
+  line-height: 1.5em;
+}
+
 /* Project Section */
 
 .project-display {
@@ -157,6 +161,12 @@ section div p {
   gap: 6%;
 }
 
+/* PROJECT CARDS */
+
+.card-a {
+  text-decoration: none;
+}
+
 .project-card {
   display: grid;
   gap: 20px;
@@ -164,19 +174,32 @@ section div p {
   width: 350px;
   background-color: var(--primary-dark);
   border-radius: 8px;
-  box-shadow: 10px 10px 10px -2px rgba(0, 0, 0, 0.75);
-  transition: 100ms;
+  box-shadow: 10px 10px 25px -2px rgba(0, 0, 0, 0.40);
+  border-right: var(--primary-light) 2px solid;
+  border-bottom: var(--primary-light) 2px solid;
+  color: var(--gray-000);
+  transition: 500ms;
 }
 
 .project-card:hover {
-  border-bottom: var(--secondary) solid 1px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+  border-bottom: var(--secondary) solid 2px;
+  border-right: var(--secondary) solid 2px;
+  background-color: var(--primary-light);
+  box-shadow: 20px 20px 30px -4px rgba(0, 0, 0, 0.40);
+}
+
+.card-animation {
+  transition: transform 0.3s ease-out;
+}
+
+.card-animation:hover {
+  transform: translate(-1%, -1%);
 }
 
 .project-card img {
   width: 100%;
-  object-fit: contain;
+  height: 160px;
+  object-fit: cover;
 }
 
 .card-icon {
@@ -194,7 +217,7 @@ section div p {
 
 .card-p {
   line-height: 1.5em;
-  height: 270px;
+  height: 264px;
 }
 
 .card-code ul {
@@ -207,4 +230,5 @@ section div p {
   background-color: var(--primary-light);
   padding: 4px;
   border-radius: 4px;
+  transition: 500ms;
 }

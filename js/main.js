@@ -1,12 +1,11 @@
 //RUN ON DOCUMENT READY
 $(document).ready(function(){
     projectCardAppend()
-    console.log("hello");
 });
 
 //RUN ON PAGE LOADED
 $(window).on('load',function(){
-
+    voidBlankLinks();
 });
 
 //RUN WHEN WINDOW IS RESIZED
@@ -22,6 +21,7 @@ $(window).on('scroll',function(){
 
 function projectCardAppend() {
 
+    let links = ['https://deconile.github.io/death-stranding/', '']
     let icons = ['fa-window-maximize', 'fa-gamepad'];
     let titles = ['Death Stranding Landing Page', 'Solar Clicker', 'React'];
     let images = ['death-stranding-img.png', 'solar-clicker-img.png', 'death-stranding-img.png']
@@ -38,20 +38,31 @@ function projectCardAppend() {
         });
 
         let temp = `
-        <div class="project-card">
-            <div class="card-icon"><i class="fa-solid ${icons[i]}"></i></div>
-            <div class="card-header"><h4>${titles[i]}</h4></div>
-            <div class="card-img"><img src="images/${images[i]}"/></div>
-            <div class="card-p">                        
-                <p>${texts[i]}</p>
+        <a class="card-a card-animation" href="${links[i]}">
+            <div class="project-card">
+                <div class="card-icon"><i class="fa-solid ${icons[i]}"></i></div>
+                <div class="card-header"><h4>${titles[i]}</h4></div>
+                <div class="card-img"><img src="images/${images[i]}"/></div>
+                <div class="card-p">                        
+                    <p>${texts[i]}</p>
+                </div>
+                <div class="card-code">
+                    <ul>
+                        ${techSec}
+                    </ul>
+                </div>
             </div>
-            <div class="card-code">
-                <ul>
-                    ${techSec}
-                </ul>
-            </div>
-        </div>`
+        </a>
+        `
         $(".project-container").append(temp);
     }
 
+}
+
+function voidBlankLinks(){
+    $('a').each(function(){
+        if($(this).attr('href') === ''){
+            $(this).attr('href','javascript:void();')
+        }
+    });
 }
