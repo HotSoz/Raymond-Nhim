@@ -3,12 +3,15 @@
     <head>
         <link rel="stylesheet" href="css/main.css">
 
+        <title>Raymond Nhim</title>
+
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/3e4d5a9265.js" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
+        <script src="js/cards-databse.js"></script>
     </head>
     <body>
-        <nav>
+        <nav id="navbar">
             <div class="logo">
                 <a href="#main">
                     <div class="logo-border">
@@ -18,32 +21,59 @@
             </div>
             <div class="navigation">
                 <ul>
+                    <li><a href="#about-me">About</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#contact-me">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
-        <section id="main" class="limited">
+
+        <section id="main" class="container-flex main-section">
             <div class="hero">
                 <h4>Hello there!</h4>
-                <h1><span class="secondary-text">Raymond Nhim</span>, at your service.</h1>
-                <h3>I am a problem solver enthusiast.</h3>
-                <p class="hero-text">Currently I am working on <span class="secondary-text">front-end web development</span> projects. 
+                <h1><span class="secondary-text">Raymond</span>, a think outside the box kinda guy.</h1>
+                <h3>Web Developer / Game Developer</h3>
+            </div>
+        </section>
+
+        <section id="about-me" class="container-flex about-section">
+            <div class="intro">
+                <p>Programming was my new favorite hobby ever since I touched a computer. 
+                    The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
+                    I became a problem solver when I got into high school, digging for brain teasers, math problems, 
+                    algorithms, anything that I would enjoy breaking apart and building it back up.
+                </p>
+    
+                <p class="">Currently I am working on <span class="secondary-text">front-end web development</span> projects. 
                     My other projects include <span class="secondary-text">game development</span>, 
                     <span class="secondary-text">back-end web development</span>, and <span class="secondary-text">graphics design</span>. 
                     I am an outside the box observer and enjoy experimenting new ideas and concepts. If you're looking
                     for someone who has a knack for creativity, contact me and let's have a chat!
                 </p>
             </div>
+            <div class="skills">
+                
+            </div>
         </section>
-        <section id="projects" class="limited">
+
+        <section id="projects" class="container-flex project-section">
             <div class="project-display">
                 <h2>Featured Projects</h2>
                 <div class="project-container"></div>
             </div>
         </section>
-        <section id="skills"></section>
-        <section id="contact-me"></section>
+
+        <section id="contact-me" class="container-grid contact-section">
+            <div class="contact-title">
+                <h3>Let's connect!</h3>
+                <p>I'm looking to explore new opportunities and expand my knowledge for creativity! Send me a message and let's have a chat.</p>
+            </div>
+            <div class="contact-contents">
+                <div><a href="https://www.linkedin.com/in/raymond-n-17515b1bb/" target="_blank"><i class="fa-brands fa-linkedin contact-icon"></i></a></div>
+                <div><a href="https://github.com/HotSoz" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a></div>
+                <div><a href="https://twitter.com/hot_sozzy" target="_blank"><i class="fa-brands fa-square-twitter contact-icon"></i></a></div>
+                <div><a href="mailto:raymondnhim89@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i></a></div>
+            </div>
+        </section>
     </body>
 </html>

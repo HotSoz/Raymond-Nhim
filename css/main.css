@@ -59,12 +59,13 @@ h4 {
 
 nav {
   padding: 10px;
-  background-color: var(--primary-overlay);
+  background-color: var(--primary);
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto;
   position: fixed;
   width: 100%;
   z-index: 10;
+  transition: 0.1s, transform 0.2s ease-out, box-shadow 0.3s ease-out;
 }
 
 nav div a {
@@ -78,11 +79,10 @@ nav div a div h2 {
 nav div ul {
   display: flex;
   list-style: none;
-  width: 25%;
 }
 
 nav div ul li {
-  width: 100%;
+  padding: 10px;
   text-align: center;
 }
 
@@ -96,6 +96,30 @@ nav div ul li a:hover {
   color: var(--secondary);
 }
 
+/* CONTAINERS */
+
+.container-grid {
+  display: grid;
+  height: 100%;
+  padding: 0 10%;
+}
+
+.container-flex {
+  display: flex;
+  height: 100%;
+  padding: 0 10%;
+}
+
+/* NAV BAR */
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-shadow {
+  box-shadow:  0 25px 30px -4px rgba(0, 0, 0, 0.30);
+}
+
 .logo-border {
   border: solid 5px var(--secondary);
   width: 50px;
@@ -106,6 +130,11 @@ nav div ul li a:hover {
   font-weight: 700;
   font-size: 1.5em;
   color: var(--gray-000);
+  transition: 500ms;
+}
+
+.logo-border:hover {
+  border-radius: 90px;
 }
 
 .navigation {
@@ -116,21 +145,12 @@ nav div ul li a:hover {
 
 /* Hero Section */
 
-section div p {
-  max-width: 600px;
+.container-flex.main-section {
+  align-items: center;
 }
 
 .secondary-text {
   color: var(--secondary);
-}
-
-.limited {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  height: 100%;
-  margin: auto;
 }
 
 .hero {
@@ -138,11 +158,27 @@ section div p {
   gap: 30px;
 }
 
-.hero-text {
-  line-height: 1.5em;
+
+/* ABOUT ME */
+
+.container-flex.about-section {
+  max-height: 800px;
+  align-items: center;
+}
+
+.intro {
+  display:grid;
+  gap: 50px;
+  max-width: clamp(425px, 50%, 768px);
+}
+
+.about-me-layout p {
+  margin: 20% 0;
+  line-height: 1.8em;
 }
 
 /* Project Section */
+
 
 .project-display {
   display: grid;
@@ -159,12 +195,24 @@ section div p {
   display: flex;
   justify-content: center;
   gap: 6%;
+  height: 100%;
+  flex-wrap: wrap;
 }
+
 
 /* PROJECT CARDS */
 
 .card-a {
   text-decoration: none;
+}
+
+
+.card-animation {
+  transition: transform 0.3s ease-out;
+}
+
+.card-animation:hover {
+  transform: translate(-1%, -1%);
 }
 
 .project-card {
@@ -185,15 +233,7 @@ section div p {
   border-bottom: var(--secondary) solid 2px;
   border-right: var(--secondary) solid 2px;
   background-color: var(--primary-light);
-  box-shadow: 20px 20px 30px -4px rgba(0, 0, 0, 0.40);
-}
-
-.card-animation {
-  transition: transform 0.3s ease-out;
-}
-
-.card-animation:hover {
-  transform: translate(-1%, -1%);
+  box-shadow: 20px 20px 30px -4px rgba(0, 0, 0, 0.30);
 }
 
 .project-card img {
@@ -220,15 +260,76 @@ section div p {
   height: 264px;
 }
 
-.card-code ul {
+.card-details {
+  display: grid;
+  gap: 10px;
+}
+
+.card-details ul {
   list-style: none;
   display: flex;
   gap: 10px;
 }
 
-.card-code ul li {
+.card-details ul li {
   background-color: var(--primary-light);
   padding: 4px;
   border-radius: 4px;
   transition: 500ms;
 }
+
+/* CONTACT SECTION */
+
+.container-grid.contact-section {
+  max-height: 500px;
+  padding-bottom: 50px;
+}
+
+.contact-title {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+.contact-title p {
+  margin: auto;
+  max-width: 425px;
+}
+
+.contact-contents {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon {
+  color: var(--gray-100);
+  font-size: 4em;
+  transition: transform 300ms ease-out, 500ms;
+}
+
+.contact-icon:hover {
+  color: var(--secondary);
+  transform: translateY(-5%);
+}
+
+/* 
+.card-animation {
+  transition: transform 0.3s ease-out;
+}
+
+.card-animation:hover {
+  transform: translate(-1%, -1%);
+} */
+
+/* EXPERIMENT CODE */
+
+/* FONT AWESOME */
+
+.secondary-icon {
+  color: var(--red-orange);
+}
+
+
+/* INVISIBLE ANCHOR TAGS */
