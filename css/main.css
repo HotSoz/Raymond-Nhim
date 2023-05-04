@@ -164,17 +164,35 @@ nav div ul li a:hover {
 .container-flex.about-section {
   max-height: 800px;
   align-items: center;
+  gap: 10%;
 }
 
 .intro {
   display:grid;
   gap: 50px;
-  max-width: clamp(425px, 50%, 768px);
+  max-width: clamp(425px, 50%, 700px);
 }
 
-.about-me-layout p {
-  margin: 20% 0;
-  line-height: 1.8em;
+.intro p {
+  font-size: 1.2em;
+}
+
+.skills {
+  display: grid;
+  gap: 50px;
+}
+
+.skills div {
+  display: grid;
+  gap: 20%;
+}
+
+.skills ul {
+  list-style: none;
+}
+
+.skills ul li {
+  padding: 3% 0 0 5%;
 }
 
 /* Project Section */
@@ -313,15 +331,6 @@ nav div ul li a:hover {
   color: var(--secondary);
   transform: translateY(-5%);
 }
-
-/* 
-.card-animation {
-  transition: transform 0.3s ease-out;
-}
-
-.card-animation:hover {
-  transform: translate(-1%, -1%);
-} */
 
 /* EXPERIMENT CODE */
 
