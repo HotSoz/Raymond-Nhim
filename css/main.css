@@ -175,6 +175,7 @@ nav div ul li a:hover {
 
 .intro p {
   font-size: 1.2em;
+  line-height: 1.5em;
 }
 
 .skills {
@@ -187,12 +188,9 @@ nav div ul li a:hover {
   gap: 20%;
 }
 
-.skills ul {
+.skills div ul li {
   list-style: none;
-}
-
-.skills ul li {
-  padding: 3% 0 0 5%;
+  padding: 5px 0 0 1%;
 }
 
 /* Project Section */
@@ -298,7 +296,7 @@ nav div ul li a:hover {
 
 /* CONTACT SECTION */
 
-.container-grid.contact-section {
+.container-flex.contact-section {
   max-height: 500px;
   padding-bottom: 50px;
 }
@@ -310,26 +308,34 @@ nav div ul li a:hover {
 }
 
 .contact-title p {
-  margin: auto;
+  margin: 0 auto;
   max-width: 425px;
 }
 
 .contact-contents {
-  display: flex;
+  position: fixed;
+  top: 30%;
+  padding: 5%;
+  display: grid;
   gap: 30px;
-  justify-content: center;
-  align-items: center;
 }
 
 .contact-icon {
   color: var(--gray-100);
-  font-size: 4em;
-  transition: transform 300ms ease-out, 500ms;
+  font-size: 2em;
 }
 
 .contact-icon:hover {
   color: var(--secondary);
-  transform: translateY(-5%);
+}
+
+.icon-animation {
+  width: 100%;
+  transition: transform 300ms ease-out, 500ms;
+}
+
+.icon-animation:hover {
+  transform: translateY(-30%);
 }
 
 /* EXPERIMENT CODE */

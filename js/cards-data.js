@@ -6,11 +6,11 @@ $(document).ready(function(){
 // Only three top showcase
 let primaryCards = [
     {
+        icon: 'fa-window-maximize',
         title: 'Death Stranding Landing Page',
         image: 'death-stranding-img.png',
         text: 'This project involves building a website from scratch for studying and project development purposes, with a focus on hands-on learning in HTML, CSS, JavaScript, project management, and collaboration. The project aims to develop skills for future web development projects and showcase abilities to potential employers or clients. This project also features Death Stranding. All rights go to Kojima Productions.',
         link: 'https://deconile.github.io/death-stranding/',
-        icon: 'fa-window-maximize',
         techs: ['VSCode'],
         codes: ['HTML', 'CSS', 'JavaScript', 'JQuery']
     },
