@@ -16,7 +16,7 @@ $(window).on('resize',function(){
 //RUN WHEN PAGE IS SCROLLED
 //THIS INCLUDES SCROLLING OF ANY KIND (NOT JUST USER CONTROLLED)
 $(window).on('scroll',function(){
-    navBarScroll();
+  
 });
 
 function voidBlankLinks(){

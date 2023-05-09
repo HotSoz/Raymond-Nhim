@@ -58,14 +58,10 @@ h4 {
 }
 
 nav {
-  padding: 10px;
-  background-color: var(--primary);
-  display: grid;
-  grid-template-columns: auto auto;
+  padding: 15px;
   position: fixed;
   width: 100%;
   z-index: 10;
-  transition: 0.1s, transform 0.2s ease-out, box-shadow 0.3s ease-out;
 }
 
 nav div a {
@@ -81,20 +77,10 @@ nav div ul {
   list-style: none;
 }
 
-nav div ul li {
-  padding: 10px;
-  text-align: center;
-}
-
-nav div ul li a {
-  text-decoration: none;
-  color: var(--gray-000);
-  transition: 500ms;
-}
-
 nav div ul li a:hover {
-  color: var(--secondary);
 }
+
+/* OTHERS */
 
 /* CONTAINERS */
 
@@ -120,6 +106,10 @@ nav div ul li a:hover {
   box-shadow:  0 25px 30px -4px rgba(0, 0, 0, 0.30);
 }
 
+.navbar-wide {
+  height: 7%;
+}
+
 .logo-border {
   border: solid 5px var(--secondary);
   width: 50px;
@@ -138,9 +128,59 @@ nav div ul li a:hover {
 }
 
 .navigation {
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  position: fixed;
+  right: 4%;
+  top: 15%;
+  padding: 0 1%;
+}
+
+.navigation ul {
+  display: grid;
+}
+
+.navigation ul li {
+  list-style: none;
+  text-align: right;
+  cursor: pointer;
+}
+
+.navigation ul li a {
+  width: 100%;
+  color: var(--gray-000);
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.navigation ul li a:hover {
+  color: var(--secondary);
+}
+
+.navigation .accordion-icon {
+  gap: 20px;
+}
+
+.navigation .accordion-icon li {
+  text-align: right;
+}
+
+.navigation .accordion-text {
+  gap: 15px;
+}
+
+.accordion-icon, .accordion-text {
+  position: absolute;
+  width: 82px;
+  transition: transform ease-out 0.4s;
+}
+
+.nav-icon {
+  font-size: 1.3em;
+}
+
+/* Nav Transitions */
+
+.hide-menu {
+  transform: translateX(120px);
 }
 
 /* Hero Section */
@@ -314,8 +354,8 @@ nav div ul li a:hover {
 
 .contact-contents {
   position: fixed;
-  top: 30%;
-  padding: 5%;
+  top: 10%;
+  padding: 2%;
   display: grid;
   gap: 30px;
 }
