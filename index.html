@@ -22,19 +22,20 @@
             </div>
         </nav>
         <div class="navigation">
+            <div class="invisible-box"></div>
             <ul class="accordion-icon">
                 <li><i id="icon-menu" class="fa-solid fa-arrow-left nav-icon"></i></li>
-                <li><a href="#main"><i class="fa-solid fa-house nav-icon"></i></a></li>
-                <li><a href="#about-me"><i class="fa-solid fa-address-card nav-icon"></i></a></li>
-                <li><a href="#projects"><i class="fa-solid fa-cube nav-icon"></i></a></li>
-                <li><a href="#contact-me"><i class="fa-brands fa-hive nav-icon"></i></a></li>
+                <li><a href="#main" class="toggle-section"><i id="home-toggle" class="fa-solid fa-house nav-icon"></i></a></li>
+                <li><a href="#about-me" class="toggle-section"><i id="about-toggle" class="fa-solid fa-address-card nav-icon"></i></a></li>
+                <li><a href="#projects" class="toggle-section"><i id="projects-toggle" class="fa-solid fa-cube nav-icon"></i></a></li>
+                <li><a href="#blog" class="toggle-section"><i id="blog-toggle" class="fa-brands fa-hive nav-icon"></i></a></li>
             </ul>
             <ul class="accordion-text hide-menu">
                 <li><i id="text-menu" class="fa-solid fa-arrow-right nav-icon"></i></li>
-                <li><a href="#main">Home</a></li>
-                <li><a href="#about-me">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact-me">Blog</a></li>
+                <li><a href="#main" class="toggle-section"><p id="home-toggle">Home</p></a></li>
+                <li><a href="#about-me " class="toggle-section"><p id="about-toggle">About</p></a></li>
+                <li><a href="#projects" class="toggle-section"><p id="projects-toggle">Projects</p></a></li>
+                <li><a href="#blog"   class="toggle-section"><p id="blog-toggle">Blog</p></a></li>
             </ul>
         </div>
         <div class="contact-contents">
@@ -43,7 +44,7 @@
             <div class="icon-animation"><a href="https://twitter.com/hot_sozzy" target="_blank"><i class="fa-brands fa-square-twitter contact-icon"></i></a></div>
             <div class="icon-animation"><a href="mailto:raymondnhim89@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i></a></div>
         </div>
-        <section id="main" class="container-flex main-section">
+        <section id="main" class="container-flex main-section toggle-action" style="display:none">
             <div class="hero">
                 <h4>Hello there!</h4>
                 <h1><span class="secondary-text">Raymond</span>, a think outside the box kinda guy.</h1>
@@ -51,7 +52,7 @@
             </div>
         </section>
 
-        <section id="about-me" class="container-flex about-section">
+        <section id="about-me" class="container-flex about-section toggle-action" style="display:none">
             <div class="intro">
                 <p>Programming became on of my favorite hobby ever since I touched a computer. 
                     The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
@@ -97,14 +98,14 @@
             </div>
         </section>
 
-        <section id="projects" class="container-flex project-section">
+        <section id="projects" class="container-flex project-section toggle-action" style="display:none">
             <div class="project-display">
                 <h2>Featured Projects</h2>
                 <div class="project-container"></div>
             </div>
         </section>
 
-        <section id="contact-me" class="container-flex contact-section">
+        <section id="blog" class="container-flex contact-section toggle-action" style="display:none">
             <div class="contact-title">
                 <h3>Let's connect!</h3>
                 <p>I'm looking to explore new opportunities and expand my knowledge for creativity! Send me a message and let's have a chat.</p>

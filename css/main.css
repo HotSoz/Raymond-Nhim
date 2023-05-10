@@ -82,6 +82,10 @@ nav div ul li a:hover {
 
 /* OTHERS */
 
+.invisible-box {
+  width: 82px;
+}
+
 /* CONTAINERS */
 
 .container-grid {
@@ -129,7 +133,7 @@ nav div ul li a:hover {
 
 .navigation {
   position: fixed;
-  right: 4%;
+  right: 0;
   top: 15%;
   padding: 0 1%;
 }
@@ -141,18 +145,17 @@ nav div ul li a:hover {
 .navigation ul li {
   list-style: none;
   text-align: right;
-  cursor: pointer;
 }
 
 .navigation ul li a {
   width: 100%;
   color: var(--gray-000);
   text-decoration: none;
-  transition: 500ms;
+  transition: 0.2s;
 }
 
 .navigation ul li a:hover {
-  color: var(--secondary);
+  color: var(--red-orange-light);
 }
 
 .navigation .accordion-icon {
@@ -173,8 +176,18 @@ nav div ul li a:hover {
   transition: transform ease-out 0.4s;
 }
 
+.nav-focus {
+  color: var(--red-orange);
+}
+
 .nav-icon {
   font-size: 1.3em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-icon:hover {
+  transform: translateX(-5px);
 }
 
 /* Nav Transitions */
@@ -196,6 +209,10 @@ nav div ul li a:hover {
 .hero {
   display: grid;
   gap: 30px;
+}
+
+.section {
+  display: none;
 }
 
 
