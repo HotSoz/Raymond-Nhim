@@ -57,29 +57,6 @@ h4 {
   font-size: 1.5em;
 }
 
-nav {
-  padding: 15px;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
-}
-
-nav div a {
-  text-decoration: none;
-}
-
-nav div a div h2 {
-  color: var(--gray-000);
-}
-
-nav div ul {
-  display: flex;
-  list-style: none;
-}
-
-nav div ul li a:hover {
-}
-
 /* OTHERS */
 
 .invisible-box {
@@ -87,6 +64,13 @@ nav div ul li a:hover {
 }
 
 /* CONTAINERS */
+
+#page-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 100%;
+  width: 100%;
+}
 
 .container-grid {
   display: grid;
@@ -100,18 +84,56 @@ nav div ul li a:hover {
   padding: 0 10%;
 }
 
-/* NAV BAR */
+/* CONTACT SECTION */
 
-.navbar-hidden {
-  transform: translateY(-100%);
+.contact-contents {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  max-width: 150px;
+  min-width: 100px;
 }
 
-.navbar-shadow {
-  box-shadow:  0 25px 30px -4px rgba(0, 0, 0, 0.30);
+.contact-list {
+  display: grid;
+  gap: 30px;
+  font-size: 2em;
+  padding: 0 20%;
+  list-style: none;
 }
 
-.navbar-wide {
-  height: 7%;
+.contact-icon {
+  color: var(--gray-100);
+  padding: 0 15px;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  color: var(--secondary);
+  transform: translateX(10px);
+}
+
+
+/* LOGO */
+
+#logobar {
+  padding: 15px;
+  position: fixed;
+  z-index: 10;
+}
+
+#logobar div a {
+  text-decoration: none;
+}
+
+#logobar div a div h2 {
+  color: var(--gray-000);
+}
+
+#logobar div ul {
+  display: flex;
+  list-style: none;
 }
 
 .logo-border {
@@ -131,69 +153,11 @@ nav div ul li a:hover {
   border-radius: 90px;
 }
 
-.navigation {
-  position: fixed;
-  right: 0;
-  top: 15%;
-  padding: 0 1%;
-}
+/* Sections */
 
-.navigation ul {
-  display: grid;
-}
-
-.navigation ul li {
-  list-style: none;
-  text-align: right;
-}
-
-.navigation ul li a {
+#sections {
+  overflow-y: scroll;
   width: 100%;
-  color: var(--gray-000);
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.navigation ul li a:hover {
-  color: var(--red-orange-light);
-}
-
-.navigation .accordion-icon {
-  gap: 20px;
-}
-
-.navigation .accordion-icon li {
-  text-align: right;
-}
-
-.navigation .accordion-text {
-  gap: 15px;
-}
-
-.accordion-icon, .accordion-text {
-  position: absolute;
-  width: 82px;
-  transition: transform ease-out 0.4s;
-}
-
-.nav-focus {
-  color: var(--red-orange);
-}
-
-.nav-icon {
-  font-size: 1.3em;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.nav-icon:hover {
-  transform: translateX(-5px);
-}
-
-/* Nav Transitions */
-
-.hide-menu {
-  transform: translateX(120px);
 }
 
 /* Hero Section */
@@ -219,7 +183,7 @@ nav div ul li a:hover {
 /* ABOUT ME */
 
 .container-flex.about-section {
-  max-height: 800px;
+  max-height: 1200px;
   align-items: center;
   gap: 10%;
 }
@@ -236,18 +200,23 @@ nav div ul li a:hover {
 }
 
 .skills {
+  width: 100%;
   display: grid;
   gap: 50px;
 }
 
-.skills div {
-  display: grid;
-  gap: 20%;
+.skill-point {
+  list-style: none;
+  padding: 10px 5px;
+  display: flex;
+  gap: 15px;
 }
 
-.skills div ul li {
-  list-style: none;
-  padding: 5px 0 0 1%;
+.skill-point li {
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--primary-light);
 }
 
 /* Project Section */
@@ -351,57 +320,52 @@ nav div ul li a:hover {
   transition: 500ms;
 }
 
-/* CONTACT SECTION */
+/* NAVIGATION */
 
-.container-flex.contact-section {
-  max-height: 500px;
-  padding-bottom: 50px;
-}
-
-.contact-title {
+.navigation {
   display: grid;
-  gap: 30px;
-  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 150px;
+  min-width: 100px;
 }
 
-.contact-title p {
-  margin: 0 auto;
-  max-width: 425px;
-}
-
-.contact-contents {
-  position: fixed;
-  top: 10%;
-  padding: 2%;
+.navigation ul {
   display: grid;
-  gap: 30px;
+  gap: 20px;
+  list-style: none;
 }
 
-.contact-icon {
+.navigation .accordion-icons li, .navigation .accordion-texts {
+  text-align: right;
+}
+
+.nav-icon, .accordion-texts p {
   color: var(--gray-100);
-  font-size: 2em;
 }
 
-.contact-icon:hover {
+/* .accordion-icons, .accordion-texts {
+  width: 82px;
+  transition: transform ease-out 0.4s;
+} */
+
+.nav-icon {
+  font-size: 2em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.nav-icon:hover {
+  transform: translateX(-5px);
+}
+
+/* Nav Transitions */
+
+.nav-focus {
   color: var(--secondary);
 }
 
-.icon-animation {
-  width: 100%;
-  transition: transform 300ms ease-out, 500ms;
+.hide-menu {
+  transform: translateX(0px);
 }
-
-.icon-animation:hover {
-  transform: translateY(-30%);
-}
-
-/* EXPERIMENT CODE */
-
-/* FONT AWESOME */
-
-.secondary-icon {
-  color: var(--red-orange);
-}
-
-
-/* INVISIBLE ANCHOR TAGS */
