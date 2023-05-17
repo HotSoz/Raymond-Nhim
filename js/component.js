@@ -2,18 +2,28 @@ $(document).ready(function() {
     accordionMenu();
     pageSelection();
     anchorFocus();
+    $('#menu-arrow').on('click', toggleMenu);
 });
 
 function accordionMenu() {
-    $('#icon-menu').click(function() {
-        $('.accordion-text').removeClass('hide-menu');
-        $('.accordion-icon').addClass('hide-menu');
+    $('.text-toggle').hide();
+    $('#menu-arrow').click(function() {
+        if($(this).hasClass('exit-menu')){
+            $(this).removeClass('exit-menu');
+            $('.text-toggle').hide();
+            $('.icon-toggle').show();
+        } else {
+            $(this).addClass('exit-menu');
+            $('.text-toggle').show();
+            $('.icon-toggle').hide();
+        }
     })
+}
 
-    $('#text-menu').click(function() {
-        $('.accordion-text').addClass('hide-menu');
-        $('.accordion-icon').removeClass('hide-menu');
-    })
+
+function toggleMenu() {
+    $('.text-toggle').toggleClass('hidden');
+    $('.icon-toggle').toggleClass('hidden');
 }
 
 function pageSelection() {

@@ -1,10 +1,9 @@
 $(document).ready(function(){
-    primaryCardShowCase();
-    secondaryCardShowCase();
+    CardShowCase();
 });
 
 // Only three top showcase
-let primaryCards = [
+let Cards = [
     {
         icon: 'fa-window-maximize',
         title: 'Death Stranding Landing Page',
@@ -22,15 +21,20 @@ let primaryCards = [
         link: '',
         techs: ['Unity', "Aesprite"],
         codes: ['C#']
+    },
+    {
+        icon: 'fa-gamepad',
+        title: 'Solar Clicker',
+        image: 'solar-clicker-img.png',
+        text: 'A standard cookie clicker like game with a little twist that involves solar power instead of just cookies. Dive into the wonders of solar energy and many different planets to click. Learn something new with tips or fun facts about the vast universe. Welcome to Solar Clicker',
+        link: '',
+        techs: ['Unity', "Aesprite"],
+        codes: ['C#']
     }
 ];
 
-let secondaryCards = [
-
-];
-
-function primaryCardShowCase() {
-    const primary1 = primaryCards.map((obj, index) => {
+function CardShowCase() {
+    const card1 = Cards.map((obj, index) => {
         const { icon, title, image, text, link, techs, codes } = obj;
         let cardTech = "";
         let cardCode = "";
@@ -42,13 +46,14 @@ function primaryCardShowCase() {
         });
 
         return $(".project-container").append(`
-            <a class="card-a card-animation" href="${link}" target="_blank">
-                <div class="project-card">
-                    <div class="card-icon"><i class="fa-solid ${icon}"></i></div>
-                    <div class="card-header"><h4>${title}</h4></div>
-                    <div class="card-img"><img src="images/${image}"/></div>
-                    <div class="card-p">                        
-                        <p>${text}</p>
+            <div class="project-card">
+                <div class="card-info">
+                    <div class="label">
+                        <div><i class="card-icon fa-solid ${icon}"></i></div>
+                        <div class="card-header"><h4>${title}</h4></div>
+                    </div>
+                    <div class="card-img overlay">
+                        <img src="images/${image}"/>
                     </div>
                     <div class="card-details">
                         <ul>
@@ -59,7 +64,15 @@ function primaryCardShowCase() {
                         </ul>
                     </div>
                 </div>
-            </a>
+                <div>
+                    <p><a class="card" href="${link}" target="_blank">View Project</a></p>
+                </div>
+            </div>
         `);
     })
 }
+
+
+//  <div class="card-p">                        
+// <p>${text}</p>
+// </div>
