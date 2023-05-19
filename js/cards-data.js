@@ -42,27 +42,24 @@ function CardShowCase() {
         let cardTech = "";
         let cardCode = "";
         techs.forEach((tech) => {
-            cardTech += `<li>${tech}</li>`
+            cardTech += `<li class="card-tech">${tech}</li>`
         });
         codes.forEach((code) => {
-            cardCode += `<li>${code}</li>`
+            cardCode += `<li class="card-code">${code}</li>`
         });
 
         return $(".project-container").append(`
             <div class="project-card">
                 <div class="card-info">
-                    <div class="label">
-                        <div><i class="card-icon fa-solid ${icon}"></i></div>
-                        <div class="card-header"><h4>${title}</h4></div>
-                    </div>
                     <div class="card-img overlay">
                         <img src="images/${image}"/>
+                    </div>
+                    <div class="label">
+                        <div class="card-header"><h4>${title}</h4></div>
                     </div>
                     <div class="card-details">
                         <ul>
                             ${cardTech}
-                        </ul>
-                        <ul>
                             ${cardCode}
                         </ul>
                     </div>
@@ -81,3 +78,5 @@ function CardShowCase() {
 //  <div class="card-p">                        
 // <p>${text}</p>
 // </div>
+
+{/*  */}
