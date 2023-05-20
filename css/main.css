@@ -2,17 +2,14 @@
 
 :root {
   /* COLOR */
+  --prime: #e0e8f0;
+  --neutral: #080d11;
+  --primary: #a0744b;
+  --secondary: #53595f;
+  --secondary-2: #31383f;
+  --accent: #ce8740;
 
-  /* Background */
-  --lighter-bg-dark: #50638b;
-  --bg-dark: #252e42;
-  --darker-bg-dark: #0f1e38;
-  --bg-light: #ebf1f4;
-  --darker-bg-light: #a9abac;
-  --secondary-bg-light: #ffffff;
-
-  /* Main colors */
-
+  --svg-primary: invert(47%) sepia(47%) saturate(435%) hue-rotate(348deg) brightness(93%) contrast(86%);
   
   /* Other colors */
   --gray-000:#fff;
@@ -40,6 +37,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 html,
@@ -49,7 +47,7 @@ body {
   color: var(--gray-200);
   font-size: 16px;
   box-sizing: border-box;
-  background-color: var(--bg-dark);
+  background-color: var(--neutral);
   font-family: "Clinton", sans-serif;
 }
 
@@ -73,13 +71,9 @@ a {text-decoration: none;}
   width: 100%;
 }
 
-.primary-text-d {color: var(--primary-dark)}
-
-.secondary-text-d {color: var(--secondary-dark)}
-
-.primary-text-l {color: var(--primary-light)}
-
-.secondary-text-l {color: var(--secondary-light)}
+.main-header {
+  color: var(--primary);
+}
 
 /* Logo */
 
@@ -94,7 +88,7 @@ a {text-decoration: none;}
 }
 
 #logobar div a div h2 {
-  color: var(--gray-000);
+  color: var(--prime);
 }
 
 #logobar div ul {
@@ -103,7 +97,7 @@ a {text-decoration: none;}
 }
 
 .logo-border {
-  border: solid 5px var(--primary-dark);
+  border: solid 5px var(--primary);
   width: 50px;
   height: 50px;
   text-align: center;
@@ -111,7 +105,7 @@ a {text-decoration: none;}
   font-variant: small-caps;
   font-weight: 700;
   font-size: 1.5em;
-  color: var(--gray-000);
+  color: var(--prime);
   transition: 1s;
 }
 
@@ -138,22 +132,16 @@ a {text-decoration: none;}
 }
 
 .contact-icon {
-  color: var(--gray-200);
+  color: var(--accent);
   padding: 0 20px;
   font-size: 2em;
   transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .contact-icon:hover {
-  color: var(--secondary-dark);
   transform: translateX(15px);
 }
 
-.line {
-  border: solid 1px var(--gray-200);
-  height: 100%;
-  width: 0;
-}
 
 /* Main Sections */
 
@@ -196,15 +184,19 @@ a {text-decoration: none;}
 }
 
 .intro {
+  position: relative;
   display: grid;
-  gap: 30px;
-  max-width: 600px;
+  gap: 35px;
+  max-width: 800px;
   line-height: 2;
+  padding: 10px;
 }
 
 .skills {
+  position: relative;
   display: grid;
-  gap: 30px;
+  gap: 35px;
+  padding: 10px;
 }
 
 .skills div {
@@ -219,8 +211,8 @@ a {text-decoration: none;}
 }
 
 .skill-point li {
-  background-color: var(--secondary-bg-dark);
-  color: var(--secondary-dark);
+  background-color: var(--secondary);
+  color: var(--prime);
   font-weight: 700;
   padding: 5px;
   border-radius: 5px;
@@ -228,17 +220,16 @@ a {text-decoration: none;}
   cursor: default;
 }
 
-.skill-point li:hover {
-  background-color: var(--secondary-dark);
-  color: var(--secondary-bg-dark);
-}
-
 .tag-style {
-  color: var(--gray-300);
+  color: var(--prime);
   opacity: 50%;
   font-size: 1em;
   font-family: sans-serif;
   user-select: none;
+}
+
+.primary-focus {
+  color: var(--primary);
 }
 
 /* Project Page */
@@ -270,11 +261,22 @@ a {text-decoration: none;}
 }
 
 .project-card {
-
+  position: relative;
+  padding: 20px;
+  width: 350px;
+  height: 100%;
+  display: grid;
+  gap: 10px;
 }
 
-.card-img {
-  height: 250px;
+.project-card .card-info, .project-card a {
+  position: relative;
+  z-index: 5;
+}
+
+.card-info {
+  display: grid;
+  gap: 10px;
 }
 
 .card-img img {
@@ -282,11 +284,6 @@ a {text-decoration: none;}
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.project-card {
-  width: 350px;
-  height: 300px;
 }
 
 .card {
@@ -304,6 +301,65 @@ a {text-decoration: none;}
 
 .label {
   
+}
+
+.svg-container {
+  height: 200px;
+}
+
+.svg-style {
+  margin: 0 25%;
+  width: 50%;
+  height: 100%;
+  filter: var(--svg-primary);
+  justify-self: center;
+}
+
+.card-description {
+  line-height: 1.5;
+  height: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.link-size {
+  height: 75px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-link {
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 45px;
+  background-color: var(--accent);
+  text-transform: uppercase;
+  transition: transform 0.5s ease;
+}
+
+.card-link p {
+  color: var(--neutral);
+}
+
+.card-link:hover {
+  transform: translateY(-10px);
+}
+
+.card-tech, .card-code {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.card-tech {
+  background-color: var(--secondary);
+}
+
+.card-code {
+  background-color: var(--secondary-2);
 }
 
 /* Navigation */
@@ -338,17 +394,17 @@ a {text-decoration: none;}
 }
 
 .nav-box ul li a p, .nav-box ul li a i {
-  color: var(--gray-200);
+  color: var(--accent);
   transition: transform ease 0.5s, 0.5s;
 }
 
 .nav-box ul li a i:hover, .nav-box ul li a p:hover {
-  color: var(--primary-dark);
   transform: translateX(-15px);
 }
 
 #menu-arrow {
   transition: transform 0.25s ease;
+  cursor: pointer;
 }
 
 .accordion-menu {
@@ -360,6 +416,66 @@ a {text-decoration: none;}
 }
 
 /* Experimental */
+
+.back-color.prime {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--prime);
+  opacity: 5%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.back-color.neutral {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--neutral);
+  opacity: 5%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.back-color.primary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  opacity: 5%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.back-color.secondary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary);
+  opacity: 5%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.back-color.accent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 5%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  z-index: 1;
+}
 
 .diwol::after {
   content: "";
@@ -387,4 +503,3 @@ a {text-decoration: none;}
   transform: translateX(140px);
 }
 
-.project-card:hover .card-details ul li {}

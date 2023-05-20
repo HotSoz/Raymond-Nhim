@@ -27,7 +27,7 @@ function toggleMenu() {
 }
 
 function pageSelection() {
-    $('#main').fadeIn(1000);
+    $('#main').fadeIn(800);
 
     $('.toggle-action').not('#main').hide();
 
@@ -39,7 +39,7 @@ function pageSelection() {
         $('.toggle-action').not(divId).hide();
     
         // Fade in the toggleable div
-        $(divId).fadeIn(1000);
+        $(divId).fadeIn(800);
       });
 }
 
