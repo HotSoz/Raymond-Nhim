@@ -2,6 +2,48 @@ $(document).ready(function(){
     CardShowCase();
 });
 
+function CardShowCase() {
+    const card1 = Cards.map((obj, index) => {
+        const { svg, title, image, text, link, techs, codes, type } = obj;
+        let cardTech = "";
+        let cardCode = "";
+        techs.forEach((tech) => {
+            cardTech += `<li class="card-tech">${tech}</li>`
+        });
+        codes.forEach((code) => {
+            cardCode += `<li class="card-code">${code}</li>`
+        });
+
+        return $(".project-container").append(`
+            <div class="project-card">
+                <div class="card-info">
+                    <div class="svg-container"><object type="image/svg+xml" data="svg/${svg}" class="svg-style"></object></div>
+                    <div class="label">
+                        <div class="card-header"><h4>${title}</h4></div>
+                    </div>
+                    <div class="card-details">
+                        <ul>
+                            ${cardTech}
+                            ${cardCode}
+                        </ul>
+                    </div>
+                    <div class="card-description">                        
+                        <p>${text}</p>
+                    </div>
+                </div>
+                <div class="link-size">
+                    <a href="${link}" target="_blank">
+                        <div class="card-link">
+                            <p>view project</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="back-color prime"></div>
+            </div>
+        `);
+    })
+}
+
 // Only three top showcase
 let Cards = [
     {
@@ -35,48 +77,6 @@ let Cards = [
         type: 'project',
     }
 ];
-
-function CardShowCase() {
-    const card1 = Cards.map((obj, index) => {
-        const { svg, title, image, text, link, techs, codes, type } = obj;
-        let cardTech = "";
-        let cardCode = "";
-        techs.forEach((tech) => {
-            cardTech += `<li class="card-tech">${tech}</li>`
-        });
-        codes.forEach((code) => {
-            cardCode += `<li class="card-code">${code}</li>`
-        });
-
-        return $(".project-container").append(`
-            <div class="project-card">
-                <div class="card-info">
-                    <div class="svg-container"><object type="image/svg+xml" data="svg/${svg}" class="svg-style"></object></div>
-                    <div class="label">
-                        <div class="card-header"><h4>${title}</h4></div>
-                    </div>
-                    <div class="card-details">
-                        <ul>
-                            ${cardTech}
-                            ${cardCode}
-                        </ul>
-                    </div>
-                    <div class="card-description">                        
-                        <p>${text}</p>
-                    </div>
-                </div>
-                <div class="link-size">
-                    <a href="${link}" target="_blank">
-                        <div class="card-link">
-                            <p>view blog</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="back-color prime"></div>
-            </div>
-        `);
-    })
-}
 
 
 

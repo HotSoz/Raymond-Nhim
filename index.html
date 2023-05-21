@@ -9,6 +9,7 @@
         <script src="https://kit.fontawesome.com/3e4d5a9265.js" crossorigin="anonymous"></script>
         <script src="js/main.js"></script>
         <script src="js/cards-data.js"></script>
+        <script src="js/blog-data.js"></script>
         <script src="js/component.js"></script>
     </head>
     <body>
@@ -40,17 +41,23 @@
                         <h4 style="opacity: 70%">Hello there!</h4>
                         <h1 class="main-header">Raymond N.</h1>
                         <h2 style="opacity: 70%" class="all-caps">I like to think outside the box</h2>
-                        <h3>Web Developer | Game Developer</h3>
+                        <ul class="exp">
+                            <li id="web"><h4>Web Developer</h4></li>
+                            <li id="game"><h4>Game Developer</h4></li>
+                            <li id="design"><h4>Graphics Designer</h4></li>
+                        </ul>
                         <span class="tag-style">&lt;/div&gt;</span>
+                    </div>
+                    <div class="">
                     </div>
                 </section>
         
                 <section id="about-me" class="container about-section toggle-action" style="display:none">
-                    <div class="intro">
+                    <div class="intro rel">
                         <span class="tag-style">&lt;div&gt;</span>
-                        <h3 class="main-header">About Me</h3>
+                        <h2 class="main-header">About Me</h2>
 
-                        <p>Programming became one of my favorite hobby ever since I touched a computer. 
+                        <p>Programming became one of my favorite hobbies ever since I touched a computer. 
                             The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
                             I became a problem solver, digging for brain teasers, math problems, 
                             algorithms, anything that I would enjoy breaking apart and building it back up.
@@ -65,7 +72,7 @@
                         <span class="tag-style">&lt;/div&gt;</span>
                         <div class="back-color prime"></div>
                     </div>
-                    <div class="skills">
+                    <div class="skills rel">
                         <span class="tag-style">&lt;div&gt;</span>
                         <div>
                             <h3 class="main-header">Applications I use:</h3>
@@ -102,7 +109,10 @@
                 <section id="projects" class="container project-section toggle-action" style="display:none">
                     <div class="project-display">
                         <h2 class="title-text">Featured Projects</h2>
-                        <div class="project-container"></div>
+                        <div class="scroll-wrapper x">
+                            <div class="project-container">
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <h3 class="title-text">Other Projects Coming Soon</h3>
@@ -111,12 +121,18 @@
                     </div>
                 </section>
         
-                <section id="blog" class="container contact-section toggle-action" style="display:none">
-                    <div class="contact-title">
-                        <h3>Blog Page</h3>
-                        <p>Welcome to my blog page. Valuable insights on programming and my journey as a developer. Stay tuned for regular updates and enriching content that will leave you informed and inspired.</p>
+                <section id="blog" class="container blog-section toggle-action" style="display:none">
+                    <div class="blog-display">
+                        <div class="blog-title">
+                            <h2>Blog Page</h2>
+                            <p>Valuable insights on programming and my journey as a developer.</p>
+                            <p>In my spare time, I share what I come across when learning code and development.</p>
+                        </div>
+                        <div class="scroll-wrapper y">
+                            <div class="blog-container">
+                            </div>
+                        </div>
                     </div>
-                    <div class="blog-display"></div>
                 </section>
             </div>
             <!-- Sections -->
