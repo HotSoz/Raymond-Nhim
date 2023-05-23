@@ -6,16 +6,16 @@ $(document).ready(function() {
 });
 
 function accordionMenu() {
-    $('.text-toggle').hide();
+    $('.icon-toggle').hide();
     $('#menu-arrow').click(function() {
         if($(this).hasClass('exit-menu')){
             $(this).removeClass('exit-menu');
-            $('.text-toggle').hide();
-            $('.icon-toggle').show();
+            $('.icon-toggle').hide();
+            $('.text-toggle').show();
         } else {
             $(this).addClass('exit-menu');
-            $('.text-toggle').show();
-            $('.icon-toggle').hide();
+            $('.icon-toggle').show();
+            $('.text-toggle').hide();
         }
     })
 }

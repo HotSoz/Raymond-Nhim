@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
     <head>
         <link rel="stylesheet" href="css/main.css">
 
@@ -11,6 +11,7 @@
         <script src="js/cards-data.js"></script>
         <script src="js/blog-data.js"></script>
         <script src="js/component.js"></script>
+        <script src="js/event-handler.js"></script>
     </head>
     <body>
         <div id="logobar">
@@ -39,7 +40,7 @@
                     <div class="hero">
                         <span class="tag-style">&lt;div&gt;</span>
                         <h4 style="opacity: 70%">Hello there!</h4>
-                        <h1 class="main-header">Raymond N.</h1>
+                        <h1 class="">Raymond N.</h1>
                         <h2 style="opacity: 70%" class="all-caps">I like to think outside the box</h2>
                         <ul class="exp">
                             <li id="web"><h4>Web Developer</h4></li>
@@ -53,55 +54,56 @@
                 </section>
         
                 <section id="about-me" class="container about-section toggle-action" style="display:none">
-                    <div class="intro rel">
-                        <span class="tag-style">&lt;div&gt;</span>
-                        <h2 class="main-header">About Me</h2>
-
-                        <p>Programming became one of my favorite hobbies ever since I touched a computer. 
-                            The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
-                            I became a problem solver, digging for brain teasers, math problems, 
-                            algorithms, anything that I would enjoy breaking apart and building it back up.
-                        </p>
-            
-                        <p>Currently I am working on <span class="primary-focus">front-end web development</span> projects. 
-                            My other projects include <span class="primary-focus">game development</span>, 
-                            <span class="primary-focus">back-end web development</span>, and <span class="primary-focus">graphics design</span>. 
-                            I am an outside the box observer and enjoy experimenting new ideas and concepts. If you're looking
-                            for someone who has a knack for creativity, contact me and let's have a chat!
-                        </p>
-                        <span class="tag-style">&lt;/div&gt;</span>
-                        <div class="back-color prime"></div>
-                    </div>
-                    <div class="skills rel">
-                        <span class="tag-style">&lt;div&gt;</span>
-                        <div>
-                            <h3 class="main-header">Applications I use:</h3>
-                            <ul class="skill-point">
-                                <li>Visual Studio Code</li>
-                                <li>Unity</li>
-                                <li>Aseprite</li>
-                                <li>Visual Studio</li>
-                            </ul>
+                    <div class="rel scroll-wrapper about-container">
+                        <div class="intro">
+                            <span class="tag-style">&lt;div&gt;</span>
+                            <h2 class="main-header">About Me</h2>
+    
+                            <p>Programming became one of my favorite hobbies ever since I touched a computer. 
+                                The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
+                                I became a problem solver, digging for brain teasers, math problems, 
+                                algorithms, anything that I would enjoy breaking apart and building it back up.
+                            </p>
+                
+                            <p>Currently I am working on <span class="primary-focus">front-end web development</span> projects. 
+                                My other projects include <span class="primary-focus">game development</span>, 
+                                <span class="primary-focus">back-end web development</span>, and <span class="primary-focus">graphics design</span>. 
+                                I am an outside the box observer and enjoy experimenting new ideas and concepts. If you're looking
+                                for someone who has a knack for creativity, contact me and let's have a chat!
+                            </p>
+                            <span class="tag-style">&lt;/div&gt;</span>
                         </div>
-                        <div>
-                            <h3 class="main-header">Programming Languages I use:</h3>
-                            <ul class="skill-point">
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>JQuery</li>
-                                <li>C#</li>
-                            </ul>
+                        <div class="skills rel">
+                            <span class="tag-style">&lt;div&gt;</span>
+                            <div>
+                                <h3 class="main-header">Applications I use:</h3>
+                                <ul class="skill-point">
+                                    <li>Visual Studio Code</li>
+                                    <li>Unity</li>
+                                    <li>Aseprite</li>
+                                    <li>Visual Studio</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="main-header">Programming Languages I use:</h3>
+                                <ul class="skill-point">
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>JQuery</li>
+                                    <li>C#</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="main-header">Things I am learning:</h3>
+                                <ul class="skill-point">
+                                    <li>React</li>
+                                    <li>ES6</li>
+                                    <li>Blender</li>
+                                </ul>
+                            </div>
+                            <span class="tag-style">&lt;/div&gt;</span>
                         </div>
-                        <div>
-                            <h3 class="main-header">Things I am learning:</h3>
-                            <ul class="skill-point">
-                                <li>React</li>
-                                <li>ES6</li>
-                                <li>Blender</li>
-                            </ul>
-                        </div>
-                        <span class="tag-style">&lt;/div&gt;</span>
                         <div class="back-color prime"></div>
                     </div>
                 </section>
@@ -139,15 +141,16 @@
             <div class="navigation">
                 <div class="nav-box">
                     <ul class="accordion-menu">
-                        <li><i id="menu-arrow" class="fa-solid fa-arrow-left nav-icon"></i></li>
-                        <li class="icon-toggle"><a href="#main" class="toggle-section"><i class="fa-solid fa-house nav-icon"></i></a></li>
-                        <li class="icon-toggle"><a href="#about-me" class="toggle-section"><i class="fa-solid fa-address-card nav-icon"></i></a></li>
-                        <li class="icon-toggle"><a href="#projects" class="toggle-section"><i class="fa-solid fa-cube nav-icon"></i></a></li>
-                        <li class="icon-toggle"><a href="#blog" class="toggle-section"><i class="fa-brands fa-hive nav-icon"></i></a></li>
-                        <li class="text-toggle hidden"><a href="#main" class="toggle-section"><p class="para">Home</p></a></li>
-                        <li class="text-toggle hidden"><a href="#about-me " class="toggle-section"><p class="para">About</p></a></li>
-                        <li class="text-toggle hidden"><a href="#projects" class="toggle-section"><p class="para">Projects</p></a></li>
-                        <li class="text-toggle hidden"><a href="#blog"   class="toggle-section"><p class="para">Blog</p></a></li>
+                        <li><i id="menu-arrow" class="fa-solid fa-arrow-right nav-icon"></i></li>
+                        <li class="icon-toggle hidden"><a href="#main" class="toggle-section"><i class="fa-solid fa-house nav-icon"></i></a></li>
+                        <li class="icon-toggle hidden"><a href="#about-me" class="toggle-section"><i class="fa-solid fa-address-card nav-icon"></i></a></li>
+                        <li class="icon-toggle hidden"><a href="#projects" class="toggle-section"><i class="fa-solid fa-cube nav-icon"></i></a></li>
+                        <li class="icon-toggle hidden"><a href="#blog" class="toggle-section"><i class="fa-brands fa-hive nav-icon"></i></a></li>
+                        <li class="text-toggle"><a href="#main" class="toggle-section"><p class="para">Home</p></a></li>
+                        <li class="text-toggle"><a href="#about-me " class="toggle-section"><p class="para">About</p></a></li>
+                        <li class="text-toggle"><a href="#projects" class="toggle-section"><p class="para">Projects</p></a></li>
+                        <li class="text-toggle"><a href="#blog" class="toggle-section"><p class="para">Blog</p></a></li>
+                        <li class="text-toggle"><p id="toggle-theme" class="para user-select">Theme</p></li>
                     </ul>
                 </div>
             </div>

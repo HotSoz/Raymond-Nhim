@@ -15,7 +15,7 @@ function BlogShowCase() {
                             <h6 class="card-date">${date}</h6>
                             <span class="card-title"><h1>${title}</h1></span>
                         </div>
-                    <div class="back-color primary"></div>
+                    <div class="back-color prime"></div>
                 </div>
             </a>
         `);
@@ -24,67 +24,7 @@ function BlogShowCase() {
 
 let Blogs = [
     {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
-        date: "May 05, 2023",
-        title: "The Start of My Developer Journey!",
-    },
-    {
-        subject: "get to know me",
+        subject: "My Journey",
         date: "May 05, 2023",
         title: "The Start of My Developer Journey!",
     },
