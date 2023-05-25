@@ -91,7 +91,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     padding: auto;
     color: var(--prime);
   }
@@ -198,9 +198,10 @@ ul {list-style: none;}
 
 .logo-border {
   border: solid 5px var(--primary);
-  width: 50px;
+  width: 60px;
   height: 50px;
   text-align: center;
+  opacity: 75%;
   padding: 5px;
   font-variant: small-caps;
   font-weight: 700;
@@ -257,15 +258,6 @@ ul {list-style: none;}
 
 /* Main Page */
 
-/* .container.main-section {
-  padding: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  text-align: left;
-  color: var(--prime);
-} */
-
 .container.main-section .hero {
   display: grid;
   gap: 30px;
@@ -275,7 +267,7 @@ ul {list-style: none;}
 
 .hero-section {
   display: flex;
-  gap: 100px;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
@@ -307,15 +299,6 @@ ul {list-style: none;}
 }
 
 /* About Me Page */
-
-/* .container.about-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 48px;
-  color: var(--prime);
-} */
 
 .about-container {
   display: flex;
