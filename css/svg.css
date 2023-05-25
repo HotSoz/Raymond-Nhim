@@ -1,0 +1,36 @@
+#backlight-group {
+    fill: var(--glow);
+}
+
+#cloud-group {
+    fill: var(--cloud);
+}
+
+#sun-group {
+    fill: var(--sun);
+}
+
+#moon-group {
+    fill: var(--moon);
+}
+
+.svg-animation g {
+    transition: all 500ms ease;
+}
+
+.theme-svg {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    justify-self: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+}
