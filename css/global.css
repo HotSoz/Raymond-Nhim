@@ -1,0 +1,88 @@
+:root {
+
+  /* Other colors */
+  --gray-000: #fff;
+  --gray-100: #E2E2E2;
+  --gray-200: #CCC;
+  --gray-300: #A5A5A5;
+  --gray-400: #999;
+  --gray-500: #6C6C6C;
+  --gray-600: #525252;
+  --gray-700: #333;
+  --gray-800: #222;
+  --gray-900: #000;
+
+  --sun: #FCD440;
+  --cloud: #64d1e4;
+
+  /* FONT */
+
+  --font-family: "Clinton", sans-serif;
+
+  /* size */
+  --sm-font: 12px;
+  --lg-font: 20px;
+  --xl-font: 24px;
+}
+
+:root[data-theme="dark"] {
+  --prime: #e0e8f0;
+  --light-prime: #e0e8f080;
+  --prime-focus: #996739;
+  --neutral: #080d11;
+  --primary: #a0744b;
+  --primary-sh: #a0744b3a;
+  --secondary: #53595f;
+  --secondary-2: #31383f;
+  --accent: #ce8740;
+  --svg-primary: invert(47%) sepia(47%) saturate(435%) hue-rotate(348deg) brightness(93%) contrast(86%);
+  --moon: #F6F1D5;
+}
+
+:root[data-theme="light"] {
+  --prime: #060404;
+  --light-prime: #06040480;
+  --prime-focus: #72553a;
+  --neutral: #f1e9e9;
+  --primary: #9b6e43;
+  --secondary: #f2f4e2;
+  --secondary-2: #c5c9ab;
+  --accent: #757448;
+  --svg-primary: invert(38%) sepia(20%) saturate(652%) hue-rotate(348deg) brightness(92%) contrast(89%);
+  --moon: #F6F1D5;
+  --glow: #e0e8f0;
+}
+
+/* Pseudo Based Code */
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--secondary-2);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
+/* Other classes */
+
+.all-caps {
+  text-transform: uppercase;
+}
+
+.rel {position: relative;}
+.abs {position: absolute;}
+
+.tag-style {color: var(--light-prime)}
+
+.prime-text {color: var(--primary);}

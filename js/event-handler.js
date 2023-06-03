@@ -1,7 +1,10 @@
 $(document).ready(function() {
     themeChange();
-    themeSVGChange()
+    themeSVGChange();
+    accordionMenu();
+    $('#menu-arrow').on('click', toggleMenu);
 });
+
 
 function themeChange() {
   var themes = ['dark', 'light', 'purple'];
@@ -37,4 +40,24 @@ function themeSVGChange() {
       cloudGroup.removeClass('hide').addClass('show');
     }
   });
+}
+
+function accordionMenu() {
+  $('.icon-toggle').hide();
+  $('#menu-arrow').click(function() {
+      if($(this).hasClass('exit-menu')){
+          $(this).removeClass('exit-menu');
+          $('.icon-toggle').hide();
+          $('.text-toggle').show();
+      } else {
+          $(this).addClass('exit-menu');
+          $('.icon-toggle').show();
+          $('.text-toggle').hide();
+      }
+  })
+}
+
+function toggleMenu() {
+  $('.text-toggle').toggleClass('hidden');
+  $('.icon-toggle').toggleClass('hidden');
 }

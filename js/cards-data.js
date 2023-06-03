@@ -15,9 +15,9 @@ function CardShowCase() {
         });
 
         return $(".project-container").append(`
-            <div class="project-card">
+            <div class="project-card rel">
                 <div class="card-info">
-                    <div class="svg-container"><object type="image/svg+xml" data="svg/${svg}" class="svg-style"></object></div>
+                    <div class="svg-container"><img src="svg/${svg}" class="svg-style" /></div>
                     <div class="label">
                         <div class="card-header"><h3>${title}</h3></div>
                     </div>
