@@ -1,225 +1,217 @@
 <!DOCTYPE html>
 <html data-theme="dark">
     <head>
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/svg.css">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/components.css">
+        <link rel="stylesheet" href="css/home.css">
 
         <title>Raymond Nhim</title>
 
         <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/3e4d5a9265.js" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
         <script src="js/cards-data.js"></script>
         <script src="js/blog-data.js"></script>
-        <script src="js/component.js"></script>
-        <script src="js/event-handler.js"></script>
+        <script src="js/components.js"></script>
+        <script src="js/home.js"></script>
     </head>
     <body>
-        <div id="logobar">
-            <div class="logo">
-                <div class="logo-border">
-                    Raymond
+        <nav>
+            <div id="logobar">
+                <a href="#">
+                    <div class="logo-box">
+                        <h6>Raymond</h6>
+                    </div>
+                </a>
+            </div>
+            <div class="navigation">
+                <div class="nav-container">
+                    <div class="nav-box">
+                        <ul class="accordion-menu">
+                            <li><a href="#" class="nav-link">Home</a></li>
+                            <li><a href="#about-me " class="nav-link">About</a></li>
+                            <li><a href="#projects" class="nav-link">Projects</a></li>
+                            <!-- <li><a href="#blog" class="nav-link">Blog</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="contacts">
+                        <ul class="contact-list">
+                            <li><a href="https://www.linkedin.com/in/raymond-n-17515b1bb/" target="_blank" class="nav-link"><i class="fa-brands fa-linkedin contact-icon"></i></a></li>
+                            <li><a href="https://github.com/HotSoz" target="_blank" class="nav-link"><i class="fa-brands fa-github contact-icon"></i></a></li>
+                            <li><a href="https://twitter.com/hot_sozzy" target="_blank" class="nav-link"><i class="fa-brands fa-square-twitter contact-icon"></i></a></li>
+                            <li><a href="mailto:raymondnhim89@gmail.com" class="nav-link"><i class="fa-solid fa-envelope contact-icon"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="page-container">
-            <div class="contact-contents">
-                <div>
-                    <ul class="contact-list">
-                        <li><a href="https://www.linkedin.com/in/raymond-n-17515b1bb/" target="_blank"><i class="fa-brands fa-linkedin contact-icon"></i></a></li>
-                        <li><a href="https://github.com/HotSoz" target="_blank"><i class="fa-brands fa-github contact-icon"></i></a></li>
-                        <li><a href="https://twitter.com/hot_sozzy" target="_blank"><i class="fa-brands fa-square-twitter contact-icon"></i></a></li>
-                        <li><a href="mailto:raymondnhim89@gmail.com"><i class="fa-solid fa-envelope contact-icon"></i></a></li>
-                    </ul>
-                </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <!-- Sections -->
-            <div id="sections">
-                <section id="main" class="container main-section toggle-action scroll-wrapper" style="display:none">
-                    <div class="hero-section">
-                        <div class="hero">
-                            <span class="tag-style">&lt;div&gt;</span>
-                            <h4 style="opacity: 70%">Welcome</h4>
-                            <h1 class="">Raymond Nhim</h1>
-                            <h2 style="opacity: 70%" class="all-caps info">Crafty developer focused on building creative projects.</h2>
-                            <p style="opacity:50%; font-size: 16px;">Best used in LANDSCAPE on phones or computers.</p>
-                            <p style="opacity:50%; font-size: 16px;">©2023 Raymond Nhim. All rights reserved.</p>
-                            <span class="tag-style">&lt;/div&gt;</span>
-                        </div>
-                        <div class="theme-svg svg-container" id="toggle-theme">
-                            <svg class="svg-animation" width="100%" height="100%" viewBox="0 0 1543 1476" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                                <g transform="matrix(4.16667,0,0,4.16667,-4572.95,-2002.45)">
-                                    <g id="backlight-group" transform="matrix(4.16667,0,0,4.16667,0,1.42109e-14)">
-                                        <g id="backlight3" transform="matrix(1.13999,0,0,1.13999,-46.5187,-29.7077)">
-                                            <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
-                                        </g>
-                                        <g id="backlight2" transform="matrix(0.979046,0,0,0.979046,3.506,-3.27329)">
-                                            <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
-                                        </g>
-                                        <g id="backlight1" transform="matrix(0.804696,0,0,0.804696,57.9882,25.6528)">
-                                            <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
-                                        </g>
+        </nav>
+        <!-- Sections -->
+        <div id="sections">
+            <section id="main" class="container main-section">
+                    <div class="hero">
+                        <h4 class="greeting">Welcome</h4>
+                        <h1 class="name">Raymond Nhim</h1>
+                        <h3 class="all-caps info">Crafty developer focused on building creative projects.</h3>
+                    </div>
+                    <div class="theme-svg" id="toggle-theme">
+                        <svg class="svg-animation" width="100%" height="100%" viewBox="0 0 1543 1476" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                            <g transform="matrix(4.16667,0,0,4.16667,-4572.95,-2002.45)">
+                                <g id="backlight-group" transform="matrix(4.16667,0,0,4.16667,0,1.42109e-14)">
+                                    <g id="backlight3" transform="matrix(1.13999,0,0,1.13999,-46.5187,-29.7077)">
+                                        <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
                                     </g>
-                                    <g id="sun-group" class="hide" transform="matrix(4.16667,0,0,4.16667,-0.574934,-1.14987)">
-                                        <g id="sun" transform="matrix(0.83346,0,0,0.83346,54.702,27.3265)">
-                                            <circle cx="304.091" cy="156.627" r="32.507"/>
-                                        </g>
-                                        <g id="flare" transform="matrix(1,0,0,1,-141.848,38.6357)">
-                                            <g id="flare12" transform="matrix(0.896488,-0.443067,0.443067,0.896488,-25.3948,142.725)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare11" transform="matrix(0.587383,-0.809309,0.809309,0.587383,39.2637,361.282)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare10" transform="matrix(-1.83697e-16,-1,1,-1.83697e-16,261.093,554.551)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare9" transform="matrix(-0.443067,-0.896488,0.896488,-0.443067,473.49,594.626)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare8" transform="matrix(-0.809309,-0.587383,0.587383,-0.809309,692.047,529.967)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare7" transform="matrix(-1,5.55112e-17,-5.55112e-17,-1,885.316,308.138)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare6" transform="matrix(-0.896488,0.443067,-0.443067,-0.896488,925.391,95.7407)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare5" transform="matrix(-0.587383,0.809309,-0.809309,-0.587383,860.732,-122.816)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare4" transform="matrix(5.55112e-17,1,-1,5.55112e-17,638.903,-316.085)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare3" transform="matrix(0.443067,0.896488,-0.896488,0.443067,426.506,-356.16)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare2" transform="matrix(0.809309,0.587383,-0.587383,0.809309,207.949,-291.501)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                            <g id="flare1" transform="matrix(1,0,0,1,14.6803,-69.6721)">
-                                                <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
-                                            </g>
-                                        </g>
+                                    <g id="backlight2" transform="matrix(0.979046,0,0,0.979046,3.506,-3.27329)">
+                                        <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
                                     </g>
-                                    <g id="moon-group" transform="matrix(4.16667,0,0,4.16667,-543.925,-55.9871)">
-                                        <g id="moon">
-                                            <path id="moon1" serif:id="moon" d="M449.723,146.406C459.28,150.595 465.962,160.14 465.962,171.234C465.962,186.187 453.822,198.328 438.868,198.328C433.5,198.328 428.495,196.763 424.284,194.066C440.621,192.127 453.308,178.211 453.308,161.356C453.308,155.974 452.015,150.893 449.723,146.406Z"/>
-                                        </g>
+                                    <g id="backlight1" transform="matrix(0.804696,0,0,0.804696,57.9882,25.6528)">
+                                        <circle cx="311.097" cy="164.518" r="37.281" style="fill-opacity:0.25;"/>
                                     </g>
-                                    <g transform="matrix(1,0,0,1,539.369,59.8112)">
-                                        <g id="cloud-group" class="hide">
-                                            <path id="cloud" d="M686.649,619.449C686.653,588.633 705.68,563.62 729.116,563.62C747.716,563.62 763.54,579.377 769.278,601.279C774.909,584.266 788.459,572.263 804.263,572.263C817.226,572.263 828.673,580.338 835.477,592.63C841.143,565.511 859.388,545.642 880.994,545.642C907.119,545.642 928.33,574.694 928.33,610.477C928.33,646.261 907.119,675.313 880.994,675.313C880.037,675.313 879.088,675.274 878.142,675.197L793.415,675.197C786.342,686.085 774.069,693.543 759.941,694.36L759.941,694.368L759.807,694.368C758.994,694.412 758.177,694.435 757.354,694.435C756.532,694.435 755.715,694.412 754.902,694.368L608.328,694.368C607.382,694.424 606.433,694.452 605.477,694.452C579.351,694.452 558.14,673.242 558.14,647.116C558.14,620.99 579.351,599.78 605.477,599.78C627.083,599.78 645.327,614.286 650.994,634.085C657.797,625.111 669.244,619.215 682.207,619.215C683.71,619.215 685.193,619.295 686.649,619.449Z"/>
+                                </g>
+                                <g id="sun-group" class="hide" transform="matrix(4.16667,0,0,4.16667,-0.574934,-1.14987)">
+                                    <g id="sun" transform="matrix(0.83346,0,0,0.83346,54.702,27.3265)">
+                                        <circle cx="304.091" cy="156.627" r="32.507"/>
+                                    </g>
+                                    <g id="flare" transform="matrix(1,0,0,1,-141.848,38.6357)">
+                                        <g id="flare12" transform="matrix(0.896488,-0.443067,0.443067,0.896488,-25.3948,142.725)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare11" transform="matrix(0.587383,-0.809309,0.809309,0.587383,39.2637,361.282)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare10" transform="matrix(-1.83697e-16,-1,1,-1.83697e-16,261.093,554.551)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare9" transform="matrix(-0.443067,-0.896488,0.896488,-0.443067,473.49,594.626)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare8" transform="matrix(-0.809309,-0.587383,0.587383,-0.809309,692.047,529.967)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare7" transform="matrix(-1,5.55112e-17,-5.55112e-17,-1,885.316,308.138)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare6" transform="matrix(-0.896488,0.443067,-0.443067,-0.896488,925.391,95.7407)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare5" transform="matrix(-0.587383,0.809309,-0.809309,-0.587383,860.732,-122.816)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare4" transform="matrix(5.55112e-17,1,-1,5.55112e-17,638.903,-316.085)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare3" transform="matrix(0.443067,0.896488,-0.896488,0.443067,426.506,-356.16)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare2" transform="matrix(0.809309,0.587383,-0.587383,0.809309,207.949,-291.501)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
+                                        </g>
+                                        <g id="flare1" transform="matrix(1,0,0,1,14.6803,-69.6721)">
+                                            <path d="M435.219,151.392L439.428,158.93L431.011,158.93L435.219,151.392Z">
                                         </g>
                                     </g>
                                 </g>
-                            </svg>
-                        </div>
+                                <g id="moon-group" transform="matrix(4.16667,0,0,4.16667,-543.925,-55.9871)">
+                                    <g id="moon">
+                                        <path id="moon1" serif:id="moon" d="M449.723,146.406C459.28,150.595 465.962,160.14 465.962,171.234C465.962,186.187 453.822,198.328 438.868,198.328C433.5,198.328 428.495,196.763 424.284,194.066C440.621,192.127 453.308,178.211 453.308,161.356C453.308,155.974 452.015,150.893 449.723,146.406Z"/>
+                                    </g>
+                                </g>
+                                <g transform="matrix(1,0,0,1,539.369,59.8112)">
+                                    <g id="cloud-group" class="hide">
+                                        <path id="cloud" d="M686.649,619.449C686.653,588.633 705.68,563.62 729.116,563.62C747.716,563.62 763.54,579.377 769.278,601.279C774.909,584.266 788.459,572.263 804.263,572.263C817.226,572.263 828.673,580.338 835.477,592.63C841.143,565.511 859.388,545.642 880.994,545.642C907.119,545.642 928.33,574.694 928.33,610.477C928.33,646.261 907.119,675.313 880.994,675.313C880.037,675.313 879.088,675.274 878.142,675.197L793.415,675.197C786.342,686.085 774.069,693.543 759.941,694.36L759.941,694.368L759.807,694.368C758.994,694.412 758.177,694.435 757.354,694.435C756.532,694.435 755.715,694.412 754.902,694.368L608.328,694.368C607.382,694.424 606.433,694.452 605.477,694.452C579.351,694.452 558.14,673.242 558.14,647.116C558.14,620.99 579.351,599.78 605.477,599.78C627.083,599.78 645.327,614.286 650.994,634.085C657.797,625.111 669.244,619.215 682.207,619.215C683.71,619.215 685.193,619.295 686.649,619.449Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
-                </section>
-        
-                <section id="about-me" class="container about-section toggle-action" style="display:none">
-                    <div class="rel scroll-wrapper about-container">
-                        <div class="intro">
-                            <span class="tag-style">&lt;div&gt;</span>
-                            <h2 class="main-header">About Me</h2>
+            </section>
     
-                            <p>Programming became one of my favorite hobbies ever since I touched a computer. 
-                                The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
-                                I became a problem solver, digging for brain teasers, math problems, 
-                                algorithms, anything that I would enjoy breaking apart and building it back up.
-                            </p>
-                
-                            <p>Currently I am working on <span class="primary-focus">front-end web development</span> projects. 
-                                My other projects include <span class="primary-focus">game development</span>, 
-                                <span class="primary-focus">back-end web development</span>, and <span class="primary-focus">graphics design</span>. 
-                                I am an outside the box observer and enjoy experimenting new ideas and concepts. If you're looking
-                                for someone who has a knack for creativity, contact me and let's have a chat!
-                            </p>
-                            <span class="tag-style">&lt;/div&gt;</span>
-                        </div>
-                        <div class="skills rel">
-                            <span class="tag-style">&lt;div&gt;</span>
-                            <div>
-                                <h3 class="main-header">Applications I use:</h3>
-                                <ul class="skill-point">
-                                    <li>Visual Studio Code</li>
-                                    <li>Unity</li>
-                                    <li>Aseprite</li>
-                                    <li>Visual Studio</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="main-header">Programming Languages I use:</h3>
-                                <ul class="skill-point">
-                                    <li>HTML</li>
-                                    <li>CSS</li>
-                                    <li>JavaScript</li>
-                                    <li>JQuery</li>
-                                    <li>C#</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h3 class="main-header">Things I am learning:</h3>
-                                <ul class="skill-point">
-                                    <li>React</li>
-                                    <li>ES6</li>
-                                    <li>Blender</li>
-                                </ul>
-                            </div>
-                            <span class="tag-style">&lt;/div&gt;</span>
-                        </div>
-                        <div class="back-color prime"></div>
-                    </div>
-                </section>
-        
-                <section id="projects" class="container project-section toggle-action" style="display:none">
-                    <div class="project-display">
-                        <h2 class="title-text">Featured Projects</h2>
-                        <div class="scroll-wrapper x">
-                            <div class="project-container">
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="title-text">Projects will be fully detailed in the future!</h3>
-                        <div class="other-project-container">
-                        </div>
-                    </div>
-                </section>
-        
-                <section id="blog" class="container blog-section toggle-action" style="display:none">
-                    <div class="blog-display">
-                        <div class="blog-title">
-                            <h2>Blog Page</h2>
-                            <p>Valuable insights on programming and my journey as a developer.</p>
-                            <p>In my spare time, I share what I come across when learning code and development.</p>
-                        </div>
-                        <div class="scroll-wrapper y">
-                            <div class="blog-container">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <!-- Sections -->
-            <div class="navigation">
-                <div class="nav-box">
-                    <ul class="accordion-menu">
-                        <li><i id="menu-arrow" class="fa-solid fa-arrow-right nav-icon"></i></li>
-                        <li class="icon-toggle hidden"><a href="#main" class="toggle-section"><i class="fa-solid fa-house nav-icon"></i></a></li>
-                        <li class="icon-toggle hidden"><a href="#about-me" class="toggle-section"><i class="fa-solid fa-address-card nav-icon"></i></a></li>
-                        <li class="icon-toggle hidden"><a href="#projects" class="toggle-section"><i class="fa-solid fa-cube nav-icon"></i></a></li>
-                        <!-- <li class="icon-toggle hidden"><a href="#blog" class="toggle-section"><i class="fa-brands fa-hive nav-icon"></i></a></li> -->
-                        <li class="text-toggle"><a href="#main" class="toggle-section"><p class="para">Home</p></a></li>
-                        <li class="text-toggle"><a href="#about-me " class="toggle-section"><p class="para">About</p></a></li>
-                        <li class="text-toggle"><a href="#projects" class="toggle-section"><p class="para">Projects</p></a></li>
-                        <!-- <li class="text-toggle"><a href="#blog" class="toggle-section"><p class="para">Blog</p></a></li> -->
-                    </ul>
-                </div>
-            </div>
-        </div>
+            <section id="about-me" class="container about-section rel">
+                <div class="intro">
+                    <span class="tag-style">&lt;div&gt;</span>
+                    <h4 class="prime-text">About Me</h4>
 
+                    <p>Programming became one of my favorite hobbies ever since I touched a computer. 
+                        The idea that something can be made with just code intrigued me so much that it made an impact on my life as a developer. 
+                        I became a problem solver, digging for brain teasers, math problems, 
+                        algorithms, anything that I would enjoy breaking apart and building it back up.
+                    </p>
+        
+                    <p>Currently I am working on <span class="primary-focus">front-end web development</span> projects. 
+                        My other projects include <span class="primary-focus">game development</span>, 
+                        <span class="primary-focus">back-end web development</span>, and <span class="primary-focus">graphics design</span>. 
+                        I am an outside the box observer and enjoy experimenting new ideas and concepts. If you're looking
+                        for someone who has a knack for creativity, contact me and let's have a chat!
+                    </p>
+                    <span class="tag-style">&lt;/div&gt;</span>
+                </div>
+                <div class="skills">
+                    <span class="tag-style">&lt;div&gt;</span>
+                    <div class="flex-list">
+                        <h5 class="prime-text">Applications I use:</h5>
+                        <ul class="skill-point">
+                            <li>Visual Studio Code</li>
+                            <li>Unity</li>
+                            <li>Aseprite</li>
+                            <li>Visual Studio</li>
+                        </ul>
+                    </div>
+                    <div class="flex-list">
+                        <h5 class="prime-text">Programming Languages I use:</h5>
+                        <ul class="skill-point">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>JQuery</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div class="flex-list">
+                        <h5 class="prime-text">Things I am learning:</h5>
+                        <ul class="skill-point">
+                            <li>React</li>
+                            <li>ES6</li>
+                            <li>Blender</li>
+                        </ul>
+                    </div>
+                    <span class="tag-style">&lt;/div&gt;</span>
+                </div>
+                <div class="back-color prime"></div>
+            </section>
+    
+            <section id="projects" class="container project-section">
+                <div class="project-display">
+                    <h4 class="title-text">Featured Projects</h4>
+                    <div class="">
+                        <div class="project-container">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="title-text">Projects will be fully detailed in the future!</h5>
+                    <div class="other-project-container">
+                    </div>
+                </div>
+            </section>
+    
+            <!-- <section id="blog" class="container blog-section">
+                <div class="blog-display">
+                    <div class="blog-title">
+                        <h4>Blog Page</h4>
+                        <p>Valuable insights on programming and my journey as a developer.</p>
+                        <p>In my spare time, I share what I come across when learning code and development.</p>
+                    </div>
+                    <div class="scroll-wrapper y">
+                        <div class="blog-container">
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+        </div>
+        <footer id="footer"><p>©2023 Raymond Nhim. All rights reserved.</p></footer>
     </body>
 </html>
