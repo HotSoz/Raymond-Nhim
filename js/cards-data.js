@@ -31,7 +31,7 @@ function CardShowCase() {
                         <p>${text}</p>
                     </div>
                 </div>
-                <div class="link-size">
+                <div class="link-style">
                     <a href="${link}" target="_blank">
                         <div class="card-link">
                             <p>view project</p>
