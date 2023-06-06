@@ -73,6 +73,61 @@
   background-color: var(--accent);
 }
 
+
+/* Global */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--neutral);
+    color: var(--prime);
+    font-family: var(--font-family);
+    transition: 500ms;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+h6 {
+    font-size: 1.125rem;
+}
+
 /* Other classes */
 
 .all-caps {
@@ -88,7 +143,6 @@
 
 
 /* SVG */
-
 
 .show {
   opacity: 1;
