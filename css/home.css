@@ -199,7 +199,7 @@ nav a i {
     width: 25rem;
     width: -webkit-calc(25rem);
     width: -moz-calc(25rem);
-    padding: 1rem;
+    padding: .5rem;
     gap: 1rem;
 }
 
