@@ -19,7 +19,7 @@ function CardShowCase() {
                 <div class="card-info">
                     <div class="svg-container"><img src="svg/${svg}" class="svg-style" /></div>
                     <div class="label">
-                        <div class="card-header"><h3>${title}</h3></div>
+                        <div class="card-header"><h4>${title}</h4></div>
                     </div>
                     <div class="card-details">
                         <ul>

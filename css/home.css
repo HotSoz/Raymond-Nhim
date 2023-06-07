@@ -196,10 +196,9 @@ nav a i {
     display: flex;
     flex-direction: column;
     width: 25rem;
-    width: 25rem;
     width: -webkit-calc(25rem);
     width: -moz-calc(25rem);
-    padding: .5rem;
+    padding: 1rem;
     gap: 1rem;
 }
 
