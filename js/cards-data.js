@@ -58,8 +58,8 @@ let Cards = [
     },
     {
         svg: 'game.svg',
-        title: 'Solar Clicker',
-        image: 'solar-clicker-img.png',
+        title: 'HarNess',
+        image: 'HarNess (1).png',
         text: 'A standard cookie clicker like game with a little twist that involves solar power instead of just cookies. Dive into the wonders of solar energy and many different planets to click. Learn something new with tips or fun facts about the vast universe. Welcome to Solar Clicker',
         link: 'projects/solar-clicker.html',
         techs: ['Unity', 'Aesprite'],
