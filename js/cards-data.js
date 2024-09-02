@@ -47,6 +47,16 @@ function CardShowCase() {
 // Only three top showcase
 let Cards = [
     {
+        svg: 'project.svg',
+        title: 'Try Hack Me - Journal',
+        image: '../projects/images/cyber.png',
+        text: 'Detailed journal and process of a light hacking process.',
+        link: 'https://docs.google.com/document/d/1_KFK5MBgRjcuTHKx4FbNpfHijGtx2_zNtWJjlsq1aqk/edit?usp=sharing',
+        techs: ['Google Docs'],
+        codes: ['SQL', 'Python'],
+        type: 'project',
+    },
+    {
         svg: 'web.svg',
         title: 'Death Stranding',
         image: 'death-stranding-img.png',
@@ -75,7 +85,7 @@ let Cards = [
         techs: ['CodePen'],
         codes: ['HTML', 'CSS'],
         type: 'project',
-    }
+    },
 ];
 
 
